@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+  </head>
+  <body>
+
+  	<section ng-controller="ContatosController">
+
+        <div class="container">
+                <div class="card large">
+
+                    <div class="card-content">
+
+                        <div class="row">
+
+
+                                <div class="col s8 m6 center-align">
+                                    <div class="row enter-align">
+                                        <i ng-if="state.temp" class="large material-icons center red-text">lightbulb_outline</i>
+                                        <i ng-if="!state.temp" class="large material-icons center">lightbulb_outline</i>
+                                    </div>
+
+                                    <span class="card-title activator grey-text text-darken-4">Temperatura</span>
+                                 </div>
+                            <div class="col s8 m6 center-align">
+                               <div class="row enter-align">
+                                <i ng-if="state.umid" class="large material-icons center green-text">lightbulb_outline</i>
+                                <i ng-if="!state.umid" class="large material-icons center">lightbulb_outline</i>
+                                </div>
+
+                                <span class="card-title activator grey-text text-darken-4">Umidade</span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <form class="col s12" ng-submit='setValues()'>
+                                <div class="row">
+                                    <div class="input-field col s12 ">
+                                        <i class="material-icons prefix">brightness_5</i>
+                                        <input id="temp_max" type="number" class="validate"  ng-model='value.temp_max'>
+                                        <label for="temp_max">Temperatura Máxima</label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="input-field col s12 ">
+                                        <i class="material-icons prefix">opacity</i>
+                                        <input id="umid_max" type="number" class="validate" ng-model='value.umid_max'>
+                                        <label for="umid_max">Umidade Máxima</label>
+                                    </div>
+                                </div>
+                                <button class="btn blue accent-2 waves-effect waves-light right" type="submit" name="action">Enviar
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+	</section>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="/javascripts/angular.js"></script>
+	<script src="/javascripts/ContatosController.js"></script>
+  </body>
+</html>
