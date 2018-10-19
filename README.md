@@ -15,7 +15,7 @@ The app was created in the context of a work in the discipline IoT laboratory in
 ## Requirements
 
 * Node 10
-* Server side ON
+* Server side ON (https://github.com/lab-iot-coap-server-cli/coap-server)
 
 ## Common setup
 
