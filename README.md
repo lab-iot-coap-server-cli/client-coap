@@ -26,7 +26,8 @@ https://github.com/lab-iot-coap-server-cli/client-coap.git
 cd client-coap
 ```
 Set domain of server side. 
-Change this 
+Change in /routes/index.js
+
 ```bash
 var host_coap = "192.168.0.106";
 ```
